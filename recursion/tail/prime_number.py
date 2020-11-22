@@ -5,16 +5,22 @@
 
  
 def is_prime(n, k = 2):
-  if n % k == 0:
-    return("NO")
-  elif k <= n^(2 // 1):
+  if k > n**0.5:
     return ("YES")
+  elif n % k == 0:
+    return("NO")
   else:
-    k = k + 1
+    return is_prime(n, k + 1)
 
-print(is_prime(4564753))
+def is_prime_tail(n, k = 2):
+  if k > n**0.5:
+    return ("YES")
+  elif n % k == 0:
+    return("NO") 
+  k = k + 1
+  return is_prime(n, k)
 
-def is_prime_tail(n, k):
+
 
 
   
