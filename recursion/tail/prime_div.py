@@ -2,9 +2,21 @@
 # Оформите в виде обычной и хвостовой рекурсии
 # Вариант с хвостовой рекурсией преобразуйте в цикл while
 
-def dividors(N):
-    return 0
+def dividors(n, k = 2):
+  if n == 1:
+    return
+  elif n % k == 0:
+    print(k)
+    dividors(n // k, k)
+  else:
+    dividors(n, k + 1)
 
 
-def dividors_tail(N, k):
-    return 0
+def dividors_tail(n, k = 2):
+  if n == 1:
+    return
+  elif n % k == 0:
+    print(k)
+    dividors(n // k, k)
+  else:
+    dividors(n, k + 1)
